@@ -4,7 +4,7 @@ import numpy as np
 from fastapi import FastAPI, HTTPException
 from sentence_transformers import SentenceTransformer
 
-app = FastAPI(title="Amazon Review Recommender")
+app = FastAPI(title="Semantic product search based on Amazon Review")
 
 # Load everything once at startup
 index = faiss.read_index('product_index.faiss')
