@@ -2,9 +2,10 @@
 
 Search Amazon products by meaning, not keywords — built with sentence embeddings, FAISS vector search, FastAPI, and Streamlit.
 
+
 ## Demo
 
-[▶️ Watch the 5-second semantic search demo](live_demo/semantic_search_demo.mp4)
+![Semantic Search Demo](live_demo/semantic_search_demo.gif)
 
 ## What it does
 
