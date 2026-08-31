@@ -85,7 +85,7 @@ streamlit run demo.py             # terminal 2
 ```
 
 ## Project structure
-
+```bash
 ├── notebooks/
 │ ├── EDA.ipynb # data cleaning
 │ ├── embedding.ipynb # embeddings + FAISS index + evaluation
@@ -97,7 +97,7 @@ streamlit run demo.py             # terminal 2
 ├── Dockerfile.streamlit
 ├── docker-compose.yml
 └── pyproject.toml
-
+```
 
 ## A known limitation
 
