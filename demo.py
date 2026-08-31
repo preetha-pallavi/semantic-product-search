@@ -2,14 +2,13 @@ import streamlit as st
 import requests
 import os
 
-st.title("Amazon Review-Based Product Recommender")
+st.title("Semantic product search based on Amazon Review")
 
 st.caption(
     "Results are shown with the closest matches first. "
     "Strong match = very similar reviews, Good match = related, "
     "Similar = a looser connection."
 )
-
 
 API_URL = os.environ.get("API_URL", "http://127.0.0.1:8000")
 
@@ -22,10 +21,11 @@ if st.button("Search") and search_query:
     if response.status_code == 200:
         data = response.json()
         st.write(f"**Results for:** {data['query']}")
+        st.subheader("Similar products")
         for rec in data["results"]:
             st.markdown(f"**{rec['product_id']}** — {rec['match_quality']}")
             st.caption(rec['title'])
-            st.write(rec["sample_review"])
+            st.write(f"**Review:** {rec['sample_review']}")
             st.divider()
     else:
         st.error("No results found")
