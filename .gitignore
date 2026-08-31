@@ -1,10 +1,20 @@
 # Virtual environments
 .venv/
 venv/
+env/
+ENV/
 
 # Python cache
 __pycache__/
+*.py[codz]
 *.pyc
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
 
 # Large data files (regeneratable from notebooks)
 amazon_review.csv
@@ -19,6 +29,7 @@ product_titles*.pkl
 
 # Logs
 titles_log*.txt
+*.log
 
 # OS files
 .DS_Store
@@ -26,10 +37,21 @@ titles_log*.txt
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
-# Docker
+# Docker / environment secrets
 *.env
+.env
 
-# notebooks
+# Editor / tooling
+.vscode/
+.idea/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Old title-generation experiments (kept locally only)
 generate_titles.py
 generate_tillesV2.py
 generate_titlesv3.py
