@@ -1,0 +1,35 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Large data files (regeneratable from notebooks)
+amazon_review.csv
+amazon_reviews_clean.parquet
+
+# Generated model artifacts (regeneratable from tfidf.py / embedding notebook)
+product_index.faiss
+product_ids.pkl
+product_sample_text.pkl
+product_keywords.pkl
+product_titles*.pkl
+
+# Logs
+titles_log*.txt
+
+# OS files
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Docker
+*.env
+
+# notebooks
+generate_titles.py
+generate_tillesV2.py
+generate_titlesv3.py

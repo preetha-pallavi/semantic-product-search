@@ -1,0 +1,18 @@
+FROM python:3.13-slim
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir uv
+
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen --no-dev --no-install-project
+
+COPY api.py .
+COPY product_index.faiss .
+COPY product_ids.pkl .
+COPY product_sample_text.pkl .
+COPY product_keywords.pkl .
+
+EXPOSE 8000
+
+CMD ["uv", "run", "--no-project", "uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
